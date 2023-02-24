@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title>Email and Password Validation</title>-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="output-style.css" />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--Log In-->
+      <div class="form login">
+      <header>Login</header>
+        <form action="#">
+          <div class="field input-field">
+            <input type="email" placeholder="Email" class="input" />
+          </div>
+
+          <div class="field input-field">
+            <input type="password" placeholder="Password" class="password" />
+            <i class="bx bx-hide eye-icon"></i>
+          </div>
+
+          <div class="form-link">
+            <a href="#" class="forgot-pass">Forgot password?</a>
+          </div>
+
+          <div class="field button-field">
+            <button>Login</button>
+          </div>
+        </form>
+        <div class="form-link">
+          <span
+            >Don't have an account?
+            <a href="#" class="link signup-link">Signup</a></span>
+        </div>
+
+        <div class="line"></div>
+        <div class="media-options">
+          <a href="#" class="field google">
+            <i class="bx bxl-facebook facebook-icon"></i>
+            <span>Login with Facebook</span>
+          </a>
+        </div>
+        <div class="media-options">
+          <a href="#" class="field google">
+            <img src="#" alt="" class="google-img" />
+            <span>Login with Google</span>
+          </a>
+        </div>
+      </div>
+      <div class = "form signup">
+      <header>Signup</header>
+      <form action="">
+        <div class="field email-field">
+          <div class="input-field">
+            <input type="email" placeholder="Enter your email" class="email" />
+          </div>
+          <span class="error email-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+        <div class="field create-password">
+          <div class="input-field">
+            <input
+              type="password"
+              placeholder="Create password"
+              class="password"
+            />
+            <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error password-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter atleast 8 charatcer with number, symbol, small and
+              capital letter.
+            </p>
+          </span>
+        </div>
+        <div class="field confirm-password">
+          <div class="input-field">
+            <input
+              type="password"
+              placeholder="Confirm password"
+              class="cPassword"
+            />
+            <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error cPassword-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Password don't match</p>
+          </span>
+        </div>
+        <div class="input-field button">
+          <input type="submit" value="Sign" />
+        </div>
+      </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/src/script.js"></script>
+  </body>
+</html>
