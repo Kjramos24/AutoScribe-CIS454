@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<title>Email and Password Validation</title>-->
-
     <!-- CSS -->
-    <link rel="stylesheet" href="output-style.css" />
-
+    <link rel="stylesheet" href="/Frontend/autoscribe-webapp/src/register.css" />
     <!-- Boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
@@ -17,48 +14,6 @@
   </head>
   <body>
     <div class="container">
-      <!--Log In-->
-      <div class="form login">
-      <header>Login</header>
-        <form action="#">
-          <div class="field input-field">
-            <input type="email" placeholder="Email" class="input" />
-          </div>
-
-          <div class="field input-field">
-            <input type="password" placeholder="Password" class="password" />
-            <i class="bx bx-hide eye-icon"></i>
-          </div>
-
-          <div class="form-link">
-            <a href="#" class="forgot-pass">Forgot password?</a>
-          </div>
-
-          <div class="field button-field">
-            <button>Login</button>
-          </div>
-        </form>
-        <div class="form-link">
-          <span
-            >Don't have an account?
-            <a href="#" class="link signup-link">Signup</a></span>
-        </div>
-
-        <div class="line"></div>
-        <div class="media-options">
-          <a href="#" class="field google">
-            <i class="bx bxl-facebook facebook-icon"></i>
-            <span>Login with Facebook</span>
-          </a>
-        </div>
-        <div class="media-options">
-          <a href="#" class="field google">
-            <img src="#" alt="" class="google-img" />
-            <span>Login with Google</span>
-          </a>
-        </div>
-      </div>
-      <div class = "form signup">
       <header>Signup</header>
       <form action="">
         <div class="field email-field">
@@ -102,12 +57,15 @@
           </span>
         </div>
         <div class="input-field button">
-          <input type="submit" value="Sign" />
+          <input type="submit" value="Sign Up" />
         </div>
       </form>
+      <div class="form-link">
+        <span>Already have an account? <a href="login.html" class="link login-link">Log in</a></span>
+      </div>
     </div>
 
     <!-- JavaScript -->
-    <script src="/src/script.js"></script>
+    <script src="/Frontend/autoscribe-webapp/src/script.js"></script>
   </body>
 </html>
