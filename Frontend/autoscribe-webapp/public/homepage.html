@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities{
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            .dropdown:hover .drop-content{
+                display: block;
+            }
+        }
+    </style>
+
     <title>Homepage</title>
     <!--Home Page where user text is stored and sources are generated-->
-</head>
-    <body class="bg-slate-600">
+  </head>
+  <body class="box-border m-0 p-0 bg-[#F0F0F0]">
+    <!--Navbar-->
+    <header class="flex justify-end items-center py-[30py] px-[10%] bg-[#D9D9D9]">
+        <h1 class="logo cursor-pointer mr-auto">AutoScribe</h1>
+        <nav>
+            <ul class="nav-links list-none">
+                <li class="font-medium text-base inline-block py-[0px] px-[20px]"><a href="#">About</a></li>
+                <li class="font-medium text-base inline-block py-[0px] px-[20px]"><a href="#">How to Use</a></li>
+                <li class="font-medium text-base inline-block py-[0px] px-[20px]"><a href="#">Log in</a></li>
+                <li class="dropdown font-medium text-base inline-block py-[0px] px-[20px] overflow-hidden">
+                    <button class="drop-btn border-none outline-none py-[14px] px-[16px] m-0">Hello, User</button>
+                    <div class="drop-content hidden absolute bg-[#F9F9F9] min-w-[160px] shadow-lg z-1">
+                        <a href="#" class="float-none px-[12px] py-[16px] block text-left">Go Premium</a>
+                        <a href="#" class="float-none px-[12px] py-[16px] block text-left">Saved Sources</a>
+                        <a href="#" class="float-none px-[12px] py-[16px] block text-left">View Files</a>
+                        <a href="#" class="float-none px-[12px] py-[16px] block text-left">Profiles</a>
+                        <a href="#" class="float-none px-[12px] py-[16px] block text-left">Settings</a>
+                        <a href="#" class="float-none px-[12px] py-[16px] block text-left">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="font-medium text-base"></a><button class="p-[9px] bg-[#E3343B] cursor-pointer rounded-full border-none ml-[20px]">Sign up</button></a>
+    </header>
+    <!--Navbar Ends-->
+    <div class = "input-page flex mt-[30px]">
         <div class="page">
-            <textarea id="pageInput" cols="120" rows="66" class="resize-none outline-none"></textarea>
+            <textarea id="pageInput" cols="90" rows="66" class="resize-none outline-none mr-[50px] ml-[30px]"></textarea>
+          </div>
+        <div class="menu bg-[#F0F0F0] h-[screen] w-[40%] border-l-[10px] border-[#E3443B] float-right">
+            <h3>Max Searches Returned</h3>
         </div>
-        <div class="menu"></div>
-    </body>
+    </div>
+    
+  </body>
 </html>
