@@ -69,3 +69,15 @@ if (
   location.href = form.getAttribute("action");
 }
 });
+
+
+//Script for Dashboard.html
+function toggleUserContent() {
+  var ud = document.getElementById("dropdown-content");
+  if(ud.style.display === "none"){
+      ud.style.display = "block";
+  }
+  else{
+      ud.style.display = "none";
+  }
+}
