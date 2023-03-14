@@ -72,6 +72,9 @@ if (
 
 
 //Script for Dashboard.html
+var e = document.getElementById("ellipse");
+e.onclick = toggleCardContent;
+
 function toggleUserContent() {
   var ud = document.getElementById("dropdown-content");
   if(ud.style.display === "none"){
@@ -79,5 +82,15 @@ function toggleUserContent() {
   }
   else{
       ud.style.display = "none";
+  }
+}
+
+function toggleCardContent() {
+  var menu_content = document.getElementById("menu-content");
+  if(menu_content.style.display === "none"){
+      menu_content.style.display = "block";
+  }
+  else{
+      menu_content.style.display = "none";
   }
 }
