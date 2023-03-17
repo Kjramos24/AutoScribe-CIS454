@@ -8,6 +8,7 @@
 			font-family: Arial, sans-serif;
 		}
 		nav {
+            margin-top: 0%;
 			background-color: #585858;
 			color: #FFFFFF;
 			display: flex;
@@ -123,14 +124,15 @@
 	<nav>
 		<h1>AutoScribe</h1>
 		<ul>
-			<li><a href="#">About</a></li>
+			<li><a href="#"; onclick = "window.location.href='homepage.html';">Home</a></li>
+            <li><a href="#"; onclick = "window.location.href='about.html';">About</a></li>
 			<li><a href="#">How to Use</a></li>
-			<li><a href="#">Sign Up</a></li>
+			<li><a href="#"; onclick = "window.location.href='signup.html';">Sign Up</a></li>
 		</ul>
 	</nav>
     <div class="container">
     
-        <form>
+        <form action="/register" method="post">
             <h2 class="login-title">Login</h2>
             <label for="email">Email/Username:</label>
             <input type="text" id="login" name="loginname" required>
@@ -143,12 +145,14 @@
                         <p>Or Log In with:</p>
                     </div>
                     <div class ="column">
-                        <img src="applelogo.png" alt="Apple" style="width:90%" >
+                        <img src="applelogo.png" alt="Apple" style="width:90%" ; onclick= "window.location.href='https://support.apple.com/en-us/HT204053';" >
                     </div>
                     <div class="column">
-                        <img src="googlelogo.png" alt="Google" style="width:90%" >
+                        <img src="googlelogo.png" alt="Google" style="width:90%"; onclick= "window.location.href='https://accounts.google.com';" >
                     </div>
                 </div>
+                <a href="homepage.html" title="Forgot Password">Forgot Password?</a>
+                <a href="signup.html" title="Create an Account">Need an Account?</a>
             </div>
         </form>  
     </div>
