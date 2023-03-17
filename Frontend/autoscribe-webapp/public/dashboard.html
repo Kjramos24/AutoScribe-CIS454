@@ -44,14 +44,369 @@
     <!--Navbar Ends-->
 
     <!--Popup Windows-->
+    <div class="popup-windows w-[100%] fixed flex justify-center items-center">
+      <!--Edit Pop-up-->
+      <div class="edit-popup hidden bg-white w-[80%] h-[600px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+        <h1 class="text-center font-bold text-4xl mt-[30px]">Edit Group</h1>
 
-    <!--Edit-->
-    <div class="popups flex justify-center">
-      <div class="edit z-2 bg-[#FFFFFF] w-[80%] h-[500px] shadow-xl rounded-[10px] fixed mt-[50px] pt-[50px]">
-        <h1 class="text-center font-bold text-4xl">Edit</h1>
-        <input type="text" name="" id="">
+        <div class="search-bars flex flex-col self-center mt-[20px]">
+          <input type="text" name="" placeholder="Group Name..." id="" class="border-[#E3443B] border-solid border-[2px] w-[500px] h-[45px] rounded-[18px] p-[20px] mb-[20px] font-semibold focus:outline-none">
+          <input type="text" name="" placeholder="Search Saved Sources..." id="" class=" bg-[#F0F0F0] border-[1px] w-[500px] h-[45px] rounded-[18px] p-[20px] font-semibold focus:outline-none">
+        </div> 
+
+        <h3 class="text-center font-semibold text-2xl mt-[30px]">Selected Sources...</h3>
+        <div class="source-cards my-[20px] flex flex-wrap overflow-scroll justify-center">
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!--New Group Pop-up-->
+      <div class="newgroup-popup hidden bg-white w-[80%] h-[600px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+        <h1 class="text-center font-bold text-4xl mt-[30px]">New Group</h1>
+
+        <div class="search-bars flex flex-col self-center mt-[20px]">
+          <input type="text" name="" placeholder="Group Name..." id="" class="border-[#E3443B] border-solid border-[2px] w-[500px] h-[45px] rounded-[18px] p-[20px] mb-[20px] font-semibold focus:outline-none">
+          <input type="text" name="" placeholder="Search Saved Sources..." id="" class=" bg-[#F0F0F0] border-[1px] w-[500px] h-[45px] rounded-[18px] p-[20px] font-semibold focus:outline-none">
+        </div> 
+        <h3 class="text-center font-semibold text-2xl mt-[30px]">Selected Sources...</h3>
+        <div class="source-cards my-[20px] flex flex-wrap overflow-scroll justify-center">
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          <div class="source-card w-[240px] h-[200px] border-[#E3443B] border-[3px] rounded-lg flex flex-col px-[10px] mx-[15px] my-[10px]">
+            <h3 class="font-semibold text-xl text-center mt-[5px]">Source One</h3>
+
+            <a class="text-center text-[#040CDA] text-sm" href="http://">https://meepmoop.com</a>
+
+            <hr class="border-[.5px] border-black w-[85%] self-center mt-[5px]">
+
+            <p class="text-xs text-center overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+
+            <div class="add-source self-center mt-[10px]">
+              <button class="flex items-center">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="#E3443B"/>
+                <path d="M15.6697 25.6204V8.02095H20.1193V25.6204H15.6697ZM9.09482 19.0455V14.5959H26.6942V19.0455H9.09482Z" fill="white"/>
+                </svg>
+                <h4 class="ml-[10px] underline text-[#E3443B]">Add +</h4>
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!--Rename-->
+      <div class="newgroup-popup hidden bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+        <h1 class="text-center font-bold text-4xl">Rename Group</h1>
+
+        <div class="search-bars flex flex-col self-center mt-[20px]">
+          <input type="text" name="" placeholder="Group Name..." id="" class="border-[#E3443B] border-solid border-[2px] w-[500px] h-[45px] rounded-[18px] p-[20px] mb-[20px] font-semibold focus:outline-none">
+        </div> 
+
+        <button class="text-center text-xl bg-[#E3343B] text-white px-[30px] py-[10px] font-semibold self-center rounded-md">Save Rename</button>
       </div>
     </div>
+    <!--Edit-->
+    
     
 
     <!--Recent Topics-->
