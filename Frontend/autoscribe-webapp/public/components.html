@@ -26,3 +26,25 @@
         </div>
     </div>
   </div>
+
+  <div class="card bg-[#F0F0F0] min-w-[200px] h-[200px] m-[15px] rounded-md">
+    <div class="menu">
+      <button class="float-right mr-[10px] mt-[5px]" onclick="toggleCardMenu(this)">
+          <svg width="8.25" height="42" viewBox="0 0 11 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 41.47H10.3675V31.1025H0L0 41.47ZM0 25.9187H10.3675L10.3675 15.5512H0L0 25.9187ZM0 10.3675H10.3675V-2.80458e-05H0L0 10.3675Z" fill="black"/>
+            </svg>                    
+      </button>
+      <div id = "menu-content" class="hidden menu-content absolute bg-[#FFFFFF] min-w-[160px] shadow-md z-[1] mt-[10px] ml-[190px]">
+          <a class="float-none p-[5px] block text-left font-semibold" href="">Edit</a>
+          <a class = "float-none p-[5px] block text-left font-semibold"href="">Rename</a>
+          <a class = "float-none p-[5px] block text-left font-semibold"href="">Add Sources</a>
+          <a class = "float-none p-[5px] block text-left text-[#E3343B] font-semibold"href="">Delete</a>
+    </div>
+    </div>
+    <div class="content mt-[75px] flex justify-center items-center">
+      <button class="">
+        <h3 class="text-center font-bold">Group One</h3>
+        <p class="text-center font-medium">10 sources</p>
+      </button>
+    </div>
+  </div>

@@ -82,6 +82,35 @@ function toggleUserContent() {
   }
 }
 
+//show and hide card menu
 function toggleCardMenu(a) {
   a.parentNode.getElementsByClassName('menu-content')[0].classList.toggle("show");
+}
+
+//show and hide source card menu
+function toggleSourceMenu(a) {
+  a.parentNode.parentNode.getElementsByClassName('more-content')[0].classList.toggle("show");
+}
+
+//new window functions--------------------------------
+//pop up new window
+function newGroupWindow(){
+  var ng = document.getElementById("newgroup-popup");
+  if(ng.style.display === "none"){
+      ng.style.display = "flex";
+  }
+  else{
+      ng.style.display = "none";
+  }
+}
+
+//hide newgroup window
+function newGroupWindow(){
+  var ng = document.getElementById("newgroup-popup");
+  if(ng.style.display === "none"){
+      ng.style.display = "flex";
+  }
+  else{
+      ng.style.display = "none";
+  }
 }
