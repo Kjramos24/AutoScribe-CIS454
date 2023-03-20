@@ -82,6 +82,7 @@ function toggleUserContent() {
   }
 }
 
+<<<<<<< HEAD
 //show and hide card menu
 function toggleCardMenu(a) {
   a.parentNode.getElementsByClassName('menu-content')[0].classList.toggle("show");
@@ -114,3 +115,17 @@ function newGroupWindow(){
       ng.style.display = "none";
   }
 }
+
+// toggle function for showing login and signup button
+function toggleLoginButtons() {
+  const loginButton = document.querySelector('loginSignupButton');
+  const isAuthenticated = checkIfUserIsAuthenticated(); // Replace with authentication check logic
+  if (isAuthenticated) {
+    loginButton.style.display = 'none';
+    signupButton.style.display = 'none';
+  } else {
+    loginButton.style.display = 'block';
+    signupButton.style.display = 'block';
+  }
+}
+
