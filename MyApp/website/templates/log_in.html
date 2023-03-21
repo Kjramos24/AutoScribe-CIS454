@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AutoScribe Sign Up</title>
+	<style>
+		body {
+			background-color: #EFEFEF;
+			font-family: Arial, sans-serif;
+		}
+		nav {
+      margin-top: 0%;
+			background-color: #585858;
+			color: #FFFFFF;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+		}
+		nav h1 {
+			margin: 0;
+			font-size: 24px;
+			font-weight: normal;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		nav li {
+			margin-left: 10px;
+		}
+		nav a {
+			color: #FFFFFF;
+			text-decoration: none;
+			padding: 5px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+		nav a:hover {
+			background-color: #333333;
+		}
+		form {
+			background-color: #EFEFEF;
+			max-width: 500px;
+      margin: 80px auto 0;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+		form label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		form input {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      font-size: 14px;
+      color: #130d0d;
+		}
+		form input[type="submit"] {
+			background-color: #ec1d1d;
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		form input[type="submit"]:hover {
+			background-color: #C10000;
+		}
+		form .oauth {
+			display: flex;
+			flex-direction: column;
+      justify-content: center; /* center the items horizontally */
+			align-items: center;
+			margin-top: 20px;
+		}
+		form .oauth img {
+      width: 30px; /* adjust as needed */
+      height: 40px; /* adjust as needed */
+      border-radius: 10%;
+    }
+		form .password-confirm {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		form .password-confirm input {
+			margin-bottom: 10px;
+		}
+    .login-title {
+      text-align: center;
+    }
+    .container {
+      background-color: #d11515;
+      padding: 5px;
+      padding-bottom: 5px;
+      width: 600px;
+      height: 550px;
+      border-radius: 10px;
+      margin: 50px auto 0;
+    }
+    .column {
+      float: left;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      padding: 10px;
+    }
+    .row::after{
+      content:"";
+      clear: both;
+      display:table;
+    }
+	</style>
+</head>
+<body>
+	<nav>
+		<h1>AutoScribe</h1>
+		<ul>
+			<li><a href="/">Home</a></li>
+      <li><a href="about">About</a></li>
+			<li><a href="#">How to Use</a></li>
+			<li><a href="sign-up">Sign Up</a></li>
+		</ul>
+	</nav>
+  <!--This is to display messages-->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'error' %}
+      <!--If error-->
+      <div class="alert alert-danger alert-dismissable fade show" role="alert">
+        {{ message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button> 
+      </div>
+      {% else %}
+      <!--If successful-->
+      <div class="alert alert-success alert-dismissable fade show" role="alert">
+        {{ message}}
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button> 
+      </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% endwith %}
+  <!--End display of messages-->
+    <div class="container">
+        <form method="POST">
+            <h2 class="login-title">Login</h2>
+            <label for="email">Email/Username:</label>
+            <input type="text" id="login" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+            <div class="oauth">
+                <div class="row">
+                    <div class="column">
+                        <p>Or Log In With:</p>
+                    </div>
+                    <div class ="column">
+                        <img src="../static/images/applelogo.png" alt="Apple" style="width:90%" ; onclick= "window.location.href='https://support.apple.com/en-us/HT204053';" >
+                    </div>
+                    <div class="column">
+                        <img src="../static/images/googlelogo.png" alt="Google" style="width:90%"; onclick= "window.location.href='https://accounts.google.com';" >
+                    </div>
+                </div>
+                <!--needs to get fixed-->
+                <a href="/" title="Forgot Password">Forgot Password?</a>
+                <a href="sign-up" title="Create an Account">Need an Account?</a>
+            </div>
+        </form>  
+    </div>
+    </body>
+    </html>

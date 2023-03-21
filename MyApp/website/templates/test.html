@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+    />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/buttons.css">
+    <body>
+    <h1>Testing buttons!</h1>
+    <select id="dropdown">
+        <option value="option1">Media 1</option>
+        <option value="option2">Source</option>
+        <option value="option3">Source/Media</option>
+      </select>
+    <button class="bg-blue-5000 hover:bg-blue-7000 text-white font-bold py-2 px-4 rounded">
+        Save Sources
+    </button>
+     <!--This is to display messages-->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'error' %}
+        <!--If error-->
+        <div class="alert alert-warning alert-dismissable fade show" role="alert">
+        {{ message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+        </button> 
+        </div>
+        {% else %}
+        <!--If successful-->
+        <div class="alert alert-success alert-dismissable fade show" role="alert">
+        {{ message}}
+        <button type="button" class="close" data-bs-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+        </button> 
+        </div>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="container">
+        <textarea id="currText" name="currText" placeholder="Enter your text here"></textarea>
+        </br>
+        <button onclick="findSources()" id="inputText" class="button submit">Submit</button>
+        <div id="resultDiv"></div>
+    </div>
+    </head>
+    <script>
+    function findSources() {
+        var inputText = document.getElementById("currText").value;
+        fetch('/dashboard', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({inputText: inputText})
+        })
+        .then(response => response.json())
+        .then(resultList => showResult(resultList))
+    }
+    function showResult(resultList) {
+        var resultDiv = document.getElementById("resultDiv");
+        for (var i = 0; i < resultList.length; i++) {
+            var resultItem = document.createElement("p");
+            resultItem.innerHTML = resultList[i];
+            resultDiv.appendChild(resultItem);
+        }
+    }
+    </script>
+</body>
+<body>
+  <p>Result: <span id="result"></span></p>
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

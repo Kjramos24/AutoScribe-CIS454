@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Align text area between left and right</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .menu {
+        width: 200px;
+        background-color: #ccc;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
+      
+      .content {
+        flex-grow: 1;
+        margin: 0 20px;
+      }
+      
+      textarea {
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">Menu</div>
+      <div class="content">
+        <textarea></textarea>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+button {
+    background-color: blue;
+    color: rgb(247, 248, 248);
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: darkblue;
+  }
+  #dropdown {
+    font-size: 16px;
+    background-color: blueviolet;
+    color: navy;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: url('arrow.png') no-repeat right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  body {
+    background-color:lightgrey;
+  }
+  h1 {
+    color: navy;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .center {
+    display: flex;
+    padding: 70px 0;
+    border: 3px solid green;
+    justify-content: center;
+    align-items: center;
+  }
+  textarea {
+    width: 600px;
+    height: 650px;
+    font-size: 14px;
+    align-self: center;
+    background-color: #f2f2f2;
+    border: 2px solid #ccc;
+    padding: 4ch;
+    margin: 10px;
+    align-items: center
+  }
+button[type="submit"] {
+    font-size: 60px; /* increase the font size */
+    padding: 24px 24px; /* increase the padding */
+  }
+  .submit {background-color: #008CBA;} /* Blue */
+  .button3 {background-color: #f44336;} /* Red */
+  .button4 {background-color: #e7e7e7; color: black;} /* Gray */
+  .button5 {background-color: #555555;} /* Black */
+  .submitbutton {
+    background-color: rgb(74, 74, 165);
+    color: rgb(247, 248, 248);
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+  }
+  .submitbutton:hover {
+    background-color: rgb(32, 32, 155);
+  }
