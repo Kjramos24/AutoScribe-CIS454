@@ -18,14 +18,11 @@
     <!--NavBar-->
     <div class="nav-bar bg-[#D9D9D9] p-[15px] overflow-hidden">
       <h1 class="font-bold text-xl float-left">AutoScribe</h1>
-
-      <div class="nav-options float-right font-semibold">
+  
+      <div class="nav-options float-right font-semibold flex items-center">
         <a class="mr-[10px] ml-[10px]" href="http://">About</a>
         <a class="mr-[10px] ml-[10px]" href="http://">How to use</a>
         <input class="mr-[10px] ml-[10px] rounded-full h-[30px] p-[10px]" type="text" name="" id="" />
-        <a class="mr-[10px] ml-[10px]" href="http://" id="loginSignupButton">Login </a>
-        </div>
-      </div>
 
         <div class="user-dropdown float-right">
             <button class="mr-[50px] ml-[10px] dropbtn flex items-center font-semibold" onclick="toggleUserContent()">
@@ -36,12 +33,16 @@
             </button>
             <div id="dropdown-content" class="hidden absolute bg-[#FFF5F5] min-w-[160px] shadow-md z-[1] mt-[10px]">
                 <a class="float-none p-[12px] block text-left text-[#E3343B]" href="">Go Premium</a>
-                <a class = "float-none p-[12px] block text-left"href="">View Dashboard</a>
-                <a class = "float-none p-[12px] block text-left"href="">Profile</a>
-                <a class = "float-none p-[12px] block text-left"href="">Settings</a>
-                <a class = "float-none p-[12px] block text-left"href="">Log Out</a>
+                <a class = "float-none p-[12px] block text-left" href="">View Dashboard</a>
+                <a class = "float-none p-[12px] block text-left" href="">Profile</a>
+                <a class = "float-none p-[12px] block text-left" href="">Settings</a>
+                <a class = "float-none p-[12px] block text-left" href="">Log Out</a>
             </div>
-          </div>
+        </div>
+        <div id="loginSignupButton" class="hidden float-right">
+          <button class="mx-[10px]">Login</button>
+          <button class="mx-[10px] bg-[#E3443B] px-[15px] py-[10px] rounded-full text-white">Sign Up</button>
+        </div>
       </div>
     </div>
     <!--Navbar Ends-->
@@ -223,7 +224,7 @@
         </div>
         <div class="button-menu flex justify-center pb-[20px]">
           <button class="bg-[#E3443b] mr-[10px] px-[30px] py-[10px] rounded-full text-white font-semibold">Save</button>
-          <button class="border-[3px] px-[30px] py-[10px] rounded-full font-semibold">Undo Edit Group</button>
+          <button onclick="hidePopUp('edit-popup')" class="border-[3px] px-[30px] py-[10px] rounded-full font-semibold">Undo Edit Group</button>
         </div>
       </div>
 
@@ -404,12 +405,12 @@
 
         <div class="button-menu flex justify-center pb-[20px]">
           <button class="bg-[#E3443b] mr-[10px] px-[30px] py-[10px] rounded-full text-white font-semibold">Save</button>
-          <button class="border-[3px] px-[30px] py-[10px] rounded-full font-semibold">Undo Edit Group</button>
+          <button onclick="hidePopUp('newgroup-popup')"class="border-[3px] px-[30px] py-[10px] rounded-full font-semibold">Undo Edit Group</button>
         </div>
       </div>
 
       <!--Rename!-->
-      <div class="rename-popup hidden bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+      <div id="rename-popup" class="rename-popup hidden bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
         <h1 class="text-center font-bold text-4xl">Rename Group</h1>
 
         <div class="search-bars flex flex-col self-center mt-[20px]">
@@ -417,11 +418,6 @@
         </div> 
 
         <button class="text-center text-xl bg-[#E3343B] text-white px-[30px] py-[10px] font-semibold self-center rounded-md">Save Rename</button>
-
-        <div class="button-menu flex justify-center pb-[20px]">
-          <button class="bg-[#E3443b] mr-[10px] px-[30px] py-[10px] rounded-full text-white font-semibold">Save</button>
-          <button class="border-[3px] px-[30px] py-[10px] rounded-full font-semibold">Undo Edit Group</button>
-        </div>
       </div>
     </div>
     <!--Popups End-->
@@ -487,9 +483,9 @@
                     </svg>                    
               </button>
               <div id = "menu-content" class="hidden menu-content bg-[#FFFFFF] min-w-[100px] shadow-md z-40 mt-[10px] ml-[0px]">
-                  <a class="float-none p-[5px] block text-left font-semibold" href="">Edit</a>
-                  <a class = "float-none p-[5px] block text-left font-semibold"href="">Rename</a>
-                  <a class = "float-none p-[5px] block text-left font-semibold"href="">Add Sources</a>
+                  <button class="float-none p-[5px] block text-left font-semibold" onclick="showPopUp('edit-popup')">Edit</button>
+                  <button class = "float-none p-[5px] block text-left font-semibold" onclick="showPopUp('rename-popup')">Rename</button>
+                  <button class = "float-none p-[5px] block text-left font-semibold" onclick="showPopUp('edit-popup')">Add Sources</a>
                   <a class = "float-none p-[5px] block text-left text-[#E3343B] font-semibold"href="">Delete</a>
             </div>
             </div>

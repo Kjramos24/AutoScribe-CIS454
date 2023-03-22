@@ -71,7 +71,7 @@ if (
 });
 
 
-//Script for Dashboard.html
+//Script for Dashboard.html ------------------------------------------------------------------------
 function toggleUserContent() {
   var ud = document.getElementById("dropdown-content");
   if(ud.style.display === "none"){
@@ -82,7 +82,6 @@ function toggleUserContent() {
   }
 }
 
-<<<<<<< HEAD
 //show and hide card menu
 function toggleCardMenu(a) {
   a.parentNode.getElementsByClassName('menu-content')[0].classList.toggle("show");
@@ -94,31 +93,19 @@ function toggleSourceMenu(a) {
 }
 
 //new window functions--------------------------------
-//pop up new window
-function newGroupWindow(){
-  var ng = document.getElementById("newgroup-popup");
-  if(ng.style.display === "none"){
-      ng.style.display = "flex";
-  }
-  else{
-      ng.style.display = "none";
-  }
+//show pop up window
+function showPopUp(id){
+  var window = document.getElementById(id);
+  window.style.display = "flex"; 
 }
-
-//hide newgroup window
-function newGroupWindow(){
-  var ng = document.getElementById("newgroup-popup");
-  if(ng.style.display === "none"){
-      ng.style.display = "flex";
-  }
-  else{
-      ng.style.display = "none";
-  }
+function hidePopUp(id){
+  var window = document.getElementById(id);
+  window.style.display = "none"; 
 }
 
 // toggle function for showing login and signup button
 function toggleLoginButtons() {
-  const loginButton = document.querySelector('loginSignupButton');
+  const loginButton = document.getElementById('loginSignupButton');
   const isAuthenticated = checkIfUserIsAuthenticated(); // Replace with authentication check logic
   if (isAuthenticated) {
     loginButton.style.display = 'none';
