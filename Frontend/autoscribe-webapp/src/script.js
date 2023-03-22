@@ -84,7 +84,13 @@ function toggleUserContent() {
 
 //show and hide card menu
 function toggleCardMenu(a) {
-  a.parentNode.getElementsByClassName('menu-content')[0].classList.toggle("show");
+  menu = a.parentNode.getElementsByClassName('menu-content')[0];
+  if(menu.style.display === "block"){
+    menu.style.display = "none";
+  }
+  else{
+    menu.style.display = "flex";
+  }
 }
 
 //show and hide source card menu
