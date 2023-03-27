@@ -10,6 +10,7 @@ File List and Purposes
  - index.html: First page the user sees. Contains an about section as well as directions
  - register.html: Registering page for users
  - login.html: Login page for users
+ - recovery.html: Recovery page for user if forgotten password.
  - homepage.html: Takes in user long text input and returns sources
  - output-style.css: PLEASE DO NOT TOUCH
 
