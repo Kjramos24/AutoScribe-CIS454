@@ -101,9 +101,12 @@ function toggleSourceMenu(a) {
 //new window functions--------------------------------
 //show pop up window
 function showPopUp(id){
+  var files = document.getElementById("recent-files");
   var window = document.getElementById(id);
-  window.style.display = "flex"; 
+  window.style.display = "flex";
+
 }
+
 function hidePopUp(id){
   var window = document.getElementById(id);
   window.style.display = "none"; 

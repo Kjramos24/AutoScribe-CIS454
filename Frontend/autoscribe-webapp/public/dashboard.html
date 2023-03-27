@@ -50,7 +50,7 @@
     <!--Popup Windows-->
     <div class="popup-windows w-[100%] fixed flex justify-center items-center">
       <!--Edit Pop-up-->
-      <div id="edit-popup" class="edit-popup hidden bg-white w-[80%] h-[700px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+      <div id="edit-popup" class="edit-popup hidden bg-white w-[80%] h-[700px] rounded-[10px] shadow-xl z-20 relative flex flex-col">
         <h1 class="text-center font-bold text-4xl mt-[30px]">Edit Group</h1>
 
         <div class="search-bars flex flex-col self-center mt-[20px]">
@@ -229,7 +229,7 @@
       </div>
 
       <!--New Group Pop-up-->
-      <div id="newgroup-popup" class="newgroup-popup hidden bg-white w-[80%] h-[700px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+      <div id="newgroup-popup" class="newgroup-popup hidden bg-white w-[80%] h-[700px] rounded-[10px] shadow-xl z-20 relative flex flex-col">
         <h1 class="text-center font-bold text-4xl mt-[30px]">New Group</h1>
 
         <div class="search-bars flex flex-col self-center mt-[20px]">
@@ -410,7 +410,7 @@
       </div>
 
       <!--Rename!-->
-      <div id="rename-popup" class="rename-popup hidden bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+      <div id="rename-popup" class="rename-popup hidden bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-20 relative flex flex-col">
         <h1 class="text-center font-bold text-4xl">Rename Group</h1>
 
         <div class="search-bars flex flex-col self-center mt-[20px]">
@@ -421,7 +421,7 @@
       </div>
 
       <!--Add To Group-->
-      <div id="addGroup-popup" class="rename-popup bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-1 relative flex flex-col">
+      <div id="addGroup-popup" class="hidden rename-popup bg-white w-[80%] py-[50px] rounded-[10px] shadow-xl z-20 relative flex flex-col">
         <h1 class="text-center font-bold text-4xl">Add Source to Group</h1>
 
         <div class="group-dropdown flex self-center border-[2px] m-[25px] p-[10px] border-[#E3343B] rounded-md">
@@ -529,7 +529,7 @@
 
     <!--Recent Files-->
     <h2 class="text-2xl text-center font-semibold mt-[20px]">Recent Files</h2>
-    <div class="recent-files mr-[30px] mt-[30px]">
+    <div id="recent-files" class="recent-files mr-[30px] mt-[30px]">
       <div class="card-shelf flex flex-wrap ml-[30px] overflow-scroll height-[50%]">
         <div class="card new-group bg-[#F0F0F0] w-[200px] h-[200px] m-[15px] flex items-center justify-center rounded-md">
           <button class="text-center font-semibold text-lg">New File +</button>
@@ -541,8 +541,8 @@
                   <path d="M0 41.47H10.3675V31.1025H0L0 41.47ZM0 25.9187H10.3675L10.3675 15.5512H0L0 25.9187ZM0 10.3675H10.3675V-2.80458e-05H0L0 10.3675Z" fill="black"/>
                   </svg>                    
             </button>
-            <div id = "menu-content" class="hidden menu-content absolute bg-[#FFFFFF] min-w-[160px] max-w-[160px] shadow-md z-[1] mt-[10px] ml-[190px] flex-wrap">
-              <button onclick="showPopUp('edit-popup')" class=" bg-black float-none p-[5px] block text-left font-semibold">Edit</button>
+            <div id = "menu-content" class="hidden menu-content absolute bg-[#FFFFFF] min-w-[160px] max-w-[160px] shadow-md z-10 mt-[10px] ml-[190px] flex-wrap">
+              <button onclick="showPopUp('edit-popup')" class="w-[100%] float-none p-[5px] block text-left font-semibold">Edit</button>
               <button onclick="showPopUp('rename-popup')" class="w-[100%] float-none p-[5px] block text-left font-semibold">Rename</button>
               <button onclick="showPopUp('addGroup-popup')" class="w-[100%]"><a class = "float-none p-[5px] block text-left font-semibold"href="">Add to Group...</a></button>
               <a class = "float-none p-[5px] block text-left text-[#E3343B] font-semibold"href="">Delete</a>
