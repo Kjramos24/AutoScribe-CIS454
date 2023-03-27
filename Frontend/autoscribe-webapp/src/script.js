@@ -122,3 +122,32 @@ function toggleLoginButtons() {
   }
 }
 
+// Script for Recovery.html------------------------------------------------------------------------------
+
+function recoverEmail(email) {
+
+  // output if user leaves input blank.
+  var emailValue = email.value.trim();
+  if (emailValue === "") {
+    alert("Email cannot be empty.");
+    return;
+  }
+// output if user enters a non-email input,
+  var email = document.getElementById("email").value;
+  if (!email) {
+    alert("Please enter a valid email.");
+    return;
+  }
+  else
+  // if user does fill in proper email input, then
+  // Check if user is found in database **** send to backend, unsure how to do this.
+  if (this.responseText == "found") {
+    // alert user if email is found in database, proceed with recovery process
+    alert("Account found. Recovery code sent to your email!");
+  } else {
+    // alert user if email they entered was not found.
+    alert("User not found.");
+}
+}
+
+
