@@ -89,13 +89,20 @@ function toggleCardMenu(a) {
     menu.style.display = "none";
   }
   else{
-    menu.style.display = "flex";
+    menu.style.display = "block";
   }
 }
 
 //show and hide source card menu
 function toggleSourceMenu(a) {
-  a.parentNode.parentNode.getElementsByClassName('more-content')[0].classList.toggle("show");
+  //a.parentNode.parentNode.getElementsByClassName('more-content')[0].classList.toggle("show");
+  menu = a.parentNode.getElementsByClassName('menu-content')[0];
+  if(menu.style.display === "block"){
+    menu.style.display = "none";
+  }
+  else{
+    menu.style.display = "block";
+  }
 }
 
 //new window functions--------------------------------
@@ -104,12 +111,15 @@ function showPopUp(id){
   var files = document.getElementById("recent-files");
   var window = document.getElementById(id);
   window.style.display = "flex";
+  files.style.display = "none";
 
 }
 
 function hidePopUp(id){
+  var files = document.getElementById("recent-files");
   var window = document.getElementById(id);
-  window.style.display = "none"; 
+  window.style.display = "none";
+  files.style.display = "block";
 }
 
 // toggle function for showing login and signup button

@@ -440,32 +440,32 @@
       <!--Popups End-->
 
     <!--Recent Files-->
-    <h2 class="text-2xl text-center font-semibold mt-[20px]">Recent Files</h2>
-    <div class="recent-files mr-[30px] mt-[30px]">
+    <h2 class="text-2xl text-center font-semibold mt-[20px]">All Files</h2>
+    <div id="recent-files" class="recent-files mr-[30px] mt-[30px]">
       <div class="card-shelf flex flex-wrap ml-[30px] overflow-scroll height-[50%]">
         <div class="card bg-[#F0F0F0] min-w-[200px] h-[200px] m-[15px] rounded-md">
-            <div class="menu">
-              <button class="float-right mr-[10px] mt-[5px]" onclick="toggleCardMenu(this)">
-                  <svg width="8.25" height="42" viewBox="0 0 11 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 41.47H10.3675V31.1025H0L0 41.47ZM0 25.9187H10.3675L10.3675 15.5512H0L0 25.9187ZM0 10.3675H10.3675V-2.80458e-05H0L0 10.3675Z" fill="black"/>
-                    </svg>                    
-              </button>
-              <div id = "menu-content" class="hidden menu-content absolute bg-[#FFFFFF] min-w-[160px] max-w-[160px] shadow-md z-[1] mt-[10px] ml-[190px] flex-wrap">
-                  <button onclick="showPopUp('edit-popup')" class="w-[100%]"><a class="float-none p-[5px] block text-left font-semibold" href="">Edit</a></button>
-                  <button onclick="showPopUp('rename-popup')" class="w-[100%]"><a class = "float-none p-[5px] block text-left font-semibold"href="">Rename</a></button>
-                  <button onclick="showPopUp('addGroup-popup')" class="w-[100%]"><a class = "float-none p-[5px] block text-left font-semibold"href="">Add to Group...</a></button>
-                  <a class = "float-none p-[5px] block text-left text-[#E3343B] font-semibold"href="">Delete</a>
-            </div>
-            </div>
-            <div class="content mt-[50px] flex justify-center items-center">
-              <button class="">
-                <div class="bg-[#FFFFFF] w-[125px] h-[90px] shadow-lg"></div>
-                <div class="bg-[#F0F0F0] w-[200] pt-[15px]">
-                  <h3 class="font-semibold">File One</h3>
-                </div>
-              </button>
+          <div class="menu relative inline-block ml-[90%]">
+            <button class="float-right mr-[10px] m mt-[5px]" onclick="toggleCardMenu(this)">
+                <svg width="8.25" height="42" viewBox="0 0 11 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 41.47H10.3675V31.1025H0L0 41.47ZM0 25.9187H10.3675L10.3675 15.5512H0L0 25.9187ZM0 10.3675H10.3675V-2.80458e-05H0L0 10.3675Z" fill="black"/>
+                  </svg>                    
+            </button>
+            <div id = "menu-content" class="menu-content hidden absolute bg-[#FFFFFF] min-w-[120pt] shadow-md block ml-[60%]">
+              <button onclick="showPopUp('edit-popup')" class="px-[10px] py-[10px] block text-left font-semibold">Edit</button>
+              <button onclick="showPopUp('rename-popup')" class="px-[10px] py-[10px] block text-left font-semibold">Rename</button>
+              <button onclick="showPopUp('addGroup-popup')" class="px-[10px] py-[10px] block text-left font-semibold">Add to Group...</button>
+              <a class = "float-none p-[5px] block text-left text-[#E3343B] font-semibold"href="">Delete</a>
             </div>
           </div>
+          <div class="content mt-[5%] flex justify-center items-center">
+            <button class="">
+              <div class="bg-[#FFFFFF] w-[125px] h-[90px] shadow-lg"></div>
+              <div class="bg-[#F0F0F0] w-[200] pt-[15px]">
+                <h3 class="font-semibold">File One</h3>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <!--Recent Files End!-->
