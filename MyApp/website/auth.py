@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for  # pip install flask
 from website.access import signup, loginto
 from werkzeug.security import generate_password_hash, check_password_hash # pip install flask-login
-from .models import Users
+from .models import User
 from flask_login import login_user, login_required, logout_user, current_user
 from . import db # Get the database
 
@@ -14,7 +14,7 @@ def login():
         email = request.form['email']
         password = request.form['password']
         # Check if the user exists
-        account = Users.query.filter_by(email=email).first()
+        account = User.query.filter_by(email=email).first()
         # If email exists, either the password is correct or not
         if account:
             # If passwords match
@@ -47,7 +47,7 @@ def sign_up():
         pass1 = request.form['password']
         pass2 = request.form['confirm-password']
         # Check if the user exists
-        account = Users.query.filter_by(email=email).first()
+        account = User.query.filter_by(email=email).first()
         # Conditionals
         if account:
             flash("Email already exists.", category='error')
@@ -61,7 +61,7 @@ def sign_up():
             flash("Password is too short.", category='error')
         else:
             # Add the user and hash the password
-            new_user = Users(username=f"{first} {second}", email=email, password=generate_password_hash(pass1, method='sha256'))
+            new_user = User(username=f"{first} {second}", email=email, password=generate_password_hash(pass1, method='sha256'))
             db.session.add(new_user)
             db.session.commit()
             # Log user into their account and remember them

@@ -3,7 +3,7 @@ from flask_login import UserMixin
 from sqlalchemy.sql import func
 
 # This is for the Users table
-class Users(db.Model, UserMixin):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150))
     email = db.Column(db.String(320), unique=True)
@@ -15,7 +15,8 @@ class Source(db.Model):
     id = id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(10000))
     link = db.Column(db.String(10000))
-    summary = db.Column(db.String(10000))
+    desc = db.Column(db.String(10000))
+    result_id = db.Column(db.String(10000))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     # Create the association to the user
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))

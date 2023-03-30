@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
+from .models import Source
 from website.access import sourceSearch
-
+from . import db
 
 views = Blueprint('views', __name__)
 
@@ -35,9 +36,22 @@ def delete():
      # A JS function is needed to send the request here
      pass
 
-@views.route('/save-source', methods=['GET', 'POST'])
+@views.route('/save-source', methods=['POST'])
 #@login_required
 def save():
-     # A JS function is not needed to send the request here
-     # A form sumbmission can be used
-     pass
+    #  Check to see if the source has already been saved
+    data = request.get_json()
+    title = data['title']
+    link = data['link']
+    desc = data['desc']
+    result_id = data['result_id']
+    source=False # Delete this
+    # This is what will be used to check
+    # source = Source.query.filter_by(title=title, link=link, desc=desc, result_id=result_id).first()
+    if source:
+        new_Source = Source(title=title, link=link, desc=desc, result_id=result_id, user_id=current_user.id)
+        db.session.add(new_Source)
+        db.session.commit()
+        flash("Source added!", category='success')
+    #  If not, add the source to the user's database
+    return jsonify({'status': f'{title, link, result_id}'})

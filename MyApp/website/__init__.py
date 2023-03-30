@@ -19,7 +19,7 @@ def create_app():
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
     # Import database tables
-    from .models import Users
+    from .models import User
         # Manage the users that have logged in
     login_manager = LoginManager()
     # If not logged in, redirect
