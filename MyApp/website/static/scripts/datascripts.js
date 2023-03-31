@@ -63,25 +63,34 @@ function findSources() {
   .then(resultList => showResult(resultList))
 }
 // This function shows the results of the python script to the user in box elements
-function showResult(resultList) {
+//sample resultlist for testing
+let r = [
+  ["Title 1", "meep.com","random description",],
+  ["Title 2", "meep.co","random description",],
+  ["Title 3", "meep.org","description",]
+]
+
+function generateSourceCards(resultList) {
   // Document section to be appended to
-  var resultDiv = document.getElementById("list");
+  var sourceCards = document.getElementById("source-cards");
+  var numSources = document.getElementById("search-input").value;
   // Iterate through the results from the Python script
-  for (var i = 0; i < resultList.length; i++) {
+  for (var i = 0; i <= numSources; i++) {
       // Define elements and replace apostrophes with escaped ones
       var title = resultList[i][0].replace(/'/g, "\\'")
       var link = resultList[i][1].replace(/'/g, "\\'")
       var desc = resultList[i][2].replace(/'/g, "\\'")
-      var result_id = resultList[i][3].replace(/'/g, "\\'")
-      console.log(result_id)
+      //var result_id = resultList[i][3].replace(/'/g, "\\'")
+      //console.log(result_id)
       // Create a form tag to send information
       var innerForm = document.createElement("form")
       innerForm.setAttribute("id", "card" + i)  // Use i as the unique identifier
       innerForm.setAttribute("onsubmit", "return false;")
-      // Create a div tag in this section
-      var resultItem = document.createElement("div");
+
+      // Create the card background
+      var cloneCard = document.createElement("div");
       // Make the white squares source-card bg-white m-[10px] h-[150px] rounded-md p-[10px] flex"
-      resultItem.setAttribute("class", "source-card bg-white m-[10px] rounded-md p-[10px] flex")
+      resultItem.setAttribute("class", "source-card bg-white m-[10px] max-h-[150px] rounded-md p-[10px] flex");
       /////// could be made unique to access for sources or save resultItem.setAttribute("id", "card")
       // Create the main container section
       var innerContent = document.createElement("div")
