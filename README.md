@@ -20,3 +20,12 @@ About Components.html
   
 
 Finally! - Either way I will be going through the Web-app and cleaning up the files so if any of this is too complicated it is ok!
+
+
+Install:
+    To run this Flask Application:
+        - pip install flask, Flask-SQLAlchemy, flask-login
+    To run SpaCy:
+        - pip install -U pip setuptools wheel
+        - pip install -U spacy
+        - python -m spacy download en_core_web_sm

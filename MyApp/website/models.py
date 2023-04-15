@@ -12,7 +12,7 @@ class User(db.Model, UserMixin):
 
 # This is for the Source table
 class Source(db.Model):
-    id = id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(10000))
     link = db.Column(db.String(10000))
     desc = db.Column(db.String(10000))
