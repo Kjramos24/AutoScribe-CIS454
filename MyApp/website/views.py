@@ -16,7 +16,7 @@ def about():
 
 @views.route('/dashboard')
 @login_required
-def home():
+def dashboard():
     return render_template("dashboard.html", user=current_user)
 
 @views.route('/files')
@@ -31,21 +31,33 @@ def topics():
 
 @views.route('/home', methods=['GET', 'POST'])
 @login_required
-def dashboard():
+def home():
     if request.method == "POST":
-        # textInfo = request.form['currText']
-        # if len(textInfo) < 100:
-        #     flash("The text is too short!", category='error')
-        # else:
-            # Return to main page
-            flash("Good job!", category='success')
             res = request.json['inputText']
             # Get the most significant words from SPaCy
             search_terms = searchTerms.get_search_terms(str(res))
-            results = sourceSearch.get_main_sources_info(sourceSearch.get_results(search_terms))
+            results = sourceSearch.get_main_sources_info(search_terms)
             return jsonify(results)
     # This needs to be fixed
     return render_template("home.html", user=current_user)
+
+@views.route('/more-results', methods=['POST'])
+@login_required
+def more():
+    related_results = {}
+    search_link = request.json['link']
+    # Get related results using links
+    related_results = sourceSearch.get_related_articles(str(search_link))
+    return jsonify(related_results)
+
+@views.route('/cite', methods=['POST'])
+@login_required
+def cite():
+    citation = {}
+    search_id = request.json['result_id']
+    # Get related results using links
+    citation = sourceSearch.get_source_citation(str(search_id))
+    return jsonify(citation)
 
 @views.route('/delete-source', methods=['POST'])
 @login_required
@@ -70,6 +82,8 @@ def delete():
 @views.route('/save-source', methods=['POST'])
 @login_required
 def save():
+    # Track status
+    status = "exists"
     # Check to see if the source has already been saved
     data = request.get_json()
     title = data['title']
@@ -82,5 +96,6 @@ def save():
         new_Source = Source(title=title, link=link, desc=desc, result_id=result_id, user_id=current_user.id)
         db.session.add(new_Source)
         db.session.commit()
+        status = "saved"
     #  If not, add the source to the user's database
-    return jsonify({'status': f'{title, link, result_id}'})
+    return jsonify({'status': status})

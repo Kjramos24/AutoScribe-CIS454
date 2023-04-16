@@ -6,6 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid #E3443B;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+      }
+      #popup h1 {
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 2em;
+      }
+      
+      #popup .close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      #popup .copy-all {
+        display: block;
+        margin: 10px auto 0;
+        padding: 10px;
+        width: 50px;
+        border: none;
+        background-color: #fff;
+        border: 1px solid #E3443B;
+        border-radius: 50%;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
         @layer utilities{
             *{
                 box-sizing: border-box;
@@ -133,6 +176,8 @@
                 </div>
         </div>
     </div>
+    <!-- This is for the popup area -->
+    <div id="popup"></div>
     <script src="../static/scripts/home.js"></script>
     </body>
 </html>
