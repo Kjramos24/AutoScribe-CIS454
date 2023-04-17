@@ -26,17 +26,17 @@
 
         <div class="user-dropdown float-right">
             <button class="mr-[50px] ml-[10px] dropbtn flex items-center font-semibold" onclick="toggleUserContent()">
-                Hello,User
+                Hello, User
                 <svg width="12" height="7" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.9393 13.0607C11.5251 13.6464 12.4749 13.6464 13.0607 13.0607L22.6066 3.51472C23.1924 2.92893 23.1924 1.97918 22.6066 1.3934C22.0208 0.807612 21.0711 0.807612 20.4853 1.3934L12 9.87868L3.51472 1.3934C2.92893 0.807612 1.97918 0.807612 1.3934 1.3934C0.807612 1.97918 0.807612 2.92893 1.3934 3.51472L10.9393 13.0607ZM10.5 11V12H13.5V11H10.5Z" fill="black"/>
                     </svg>                
             </button>
             <div id="dropdown-content" class="hidden absolute bg-[#FFF5F5] min-w-[160px] shadow-md z-[1] mt-[10px]">
-                <a class="float-none p-[12px] block text-left text-[#E3343B]" href="">Go Premium</a>
-                <a class = "float-none p-[12px] block text-left" href="">View Dashboard</a>
-                <a class = "float-none p-[12px] block text-left" href="">Profile</a>
-                <a class = "float-none p-[12px] block text-left" href="">Settings</a>
-                <a class = "float-none p-[12px] block text-left" href="">Log Out</a>
+                <!-- <a class="float-none p-[12px] block text-left text-[#E3343B]" href="">Go Premium</a> -->
+                <!-- <a class = "float-none p-[12px] block text-left" href="">View Dashboard</a> -->
+                <a class = "float-none p-[12px] block text-left" href="#">Profile</a>
+                <a class = "float-none p-[12px] block text-left" href="#">Settings</a>
+                <a class = "float-none p-[12px] block text-left" href="logout">Log Out</a>
             </div>
         </div>
         <div id="loginSignupButton" class="hidden float-right">
@@ -532,7 +532,7 @@
     <div id="recent-files" class="recent-files mr-[30px] mt-[30px]">
       <div class="card-shelf flex flex-wrap ml-[30px] overflow-scroll height-[50%]">
         <div class="card new-group bg-[#F0F0F0] w-[200px] h-[200px] m-[15px] flex items-center justify-center rounded-md">
-          <button class="text-center font-semibold text-lg">New File +</button>
+          <a href="home"><button class="text-center font-semibold text-lg">New File +</button></a>
         </div>
         <div class="card bg-[#F0F0F0] min-w-[200px] h-[200px] m-[15px] rounded-md">
           <div class="menu relative inline-block ml-[90%]">

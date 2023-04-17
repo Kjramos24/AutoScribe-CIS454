@@ -12,7 +12,6 @@ def create_app():
     app = Flask(__name__)
     # Cookies secret key
     app.config['SECRET_KEY'] = 'idek' # To be edited
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc:///?odbc_connect=' + params
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     # Initialize SQLAlchemy database instance
     db.init_app(app)

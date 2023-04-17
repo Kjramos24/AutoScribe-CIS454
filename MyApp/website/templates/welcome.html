@@ -1,27 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="../static/home.css">
-
-<div class="container">
-    <div class="half red">
-        <div class="topnav">
-            <a class="active" href="/">Home</a>
-            <a href="about">About </a>
-            <a href="#">How to Use</a>
-            <a href="login">Sign In</a>
-            <a href="sign-up">Sign Up</a>
-            <!-- <a href="logout">Log Out</a> -->
-        </div> 
-        <header>
-            <h1>Welcome to AutoScribe!</h1>
-          </header>
-          <section id="description">
-            <h2>About the website</h2>
-            <p> AutoScribe streamlines tasks across multiple industries by auto-populating any form based on unstructured user input, solving the problem of unstructured data storage. It reduces the time and resources necessary for tasks such as medical report creation in hospitals and documentation of service requests in hospitality-based industries. Scholars and researchers can benefit from its ability to facilitate source search and referencing. AutoScribe reaches its target audience through advertisement space on writing-based platforms like Grammarly, using native and incentivized advertising techniques for increased brand awareness. It has the potential to revolutionize record-keeping and data storage.</p>
-            <button class="start-now-btn" onclick="location.href='sign-up'">Start Now</button>
-        </section>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoScribe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="nav-bar bg-[#D9D9D9] p-[15px] overflow-hidden">
+        <h1 class="font-bold text-xl float-left">AutoScribe</h1>
+        <div class="nav-options float-right font-semibold flex items-center">
+          <a class="mr-[10px] ml-[10px]" href="#about-autoscribe">About</a>
+          <a class="mr-[10px] ml-[10px]" href="#use-steps">How to use</a>
+          <input class="mr-[10px] ml-[10px] rounded-full h-[30px] p-[10px]" type="text" name="" id="" />
+      
+          <div class="user-dropdown float-right">
+              <button class="mr-[50px] ml-[10px] dropbtn flex items-center font-semibold" onclick="toggleUserContent()">
+                  Hello, User
+                  <svg width="12" height="7" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.9393 13.0607C11.5251 13.6464 12.4749 13.6464 13.0607 13.0607L22.6066 3.51472C23.1924 2.92893 23.1924 1.97918 22.6066 1.3934C22.0208 0.807612 21.0711 0.807612 20.4853 1.3934L12 9.87868L3.51472 1.3934C2.92893 0.807612 1.97918 0.807612 1.3934 1.3934C0.807612 1.97918 0.807612 2.92893 1.3934 3.51472L10.9393 13.0607ZM10.5 11V12H13.5V11H10.5Z" fill="black"/>
+                      </svg>                
+              </button>
+              <div id="dropdown-content" class="hidden absolute bg-[#FFF5F5] min-w-[160px] shadow-md z-[1] mt-[10px]">
+                  <a class="float-none p-[12px] block text-left text-[#E3343B]" href="">Go Premium</a>
+                  <a class = "float-none p-[12px] block text-left" href="dashboard">View Dashboard</a>
+                  <a class = "float-none p-[12px] block text-left" href="#">Profile</a>
+                  <a class = "float-none p-[12px] block text-left" href="#">Settings</a>
+                  <a class = "float-none p-[12px] block text-left" href="logout">Log Out</a>
+              </div>
+          </div>
+          <div id="loginSignupButton" class="hidden float-right">
+            <button class="mx-[10px]">Login</button>
+            <button class="mx-[10px] bg-[#E3443B] px-[15px] py-[10px] rounded-full text-white">Sign Up</button>
+          </div>
+        </div>
     </div>
-    <div class="half gray"></div>
-</div>
+
+    <div class="hero bg-[#E3343B] w-full py-[100px] flex flex-wrap justify-center">
+      <h2 class="text-center text-white text-2xl pb-[50px]">Lightning Fast Research at your Fingertips!</h2>
+      <p class="text-white text-center pb-[50px]">AutoScribe streamlines tasks across multiple industries by auto-populating any form based on unstructured user input, solving the problem of unstructured data storage. It reduces the time and resources necessary for tasks such as medical report creation in hospitals and documentation of service requests in hospitality-based industries. Scholars and researchers can benefit from its ability to facilitate source search and referencing. AutoScribe reaches its target audience through advertisement space on writing-based platforms like Grammarly, using native and incentivized advertising techniques for increased brand awareness. It has the potential to revolutionize record-keeping and data storage.</p>
+      <a href="sign-up"><button onclick="" class="bg-white font-bold px-[20px] py-[10px] rounded-full block">Start Now</button></a></row>
+    </div>
+
+    <div class="about-autoscribe flex">
+      <div class="about-header flex justify-center items-center p-[10%]">
+        <a name="about-autoscribe"></a>
+        <h class="text-3xl font-bold text-center">About AutoScribe</h2>
+        <img src="../static/images/logo.png" alt=“Logo” style="width:80%"></img>
+      </div>
+      <div class="about-content p-[5%]">
+        <h2 class="font-semibold">Our Tool</h2>
+        <p>Welcome to AutoScribe, where we aim to make the process of citing sources quick, easy, and accurate. We understand that properly citing sources can be a daunting task, especially when dealing with various citation styles and formats. Our website provides a simple and user-friendly interface that allows users to generate citations in a variety of styles, including APA, MLA, Chicago, Harvard, and more. Whether you're a student, researcher, or professional, our website can save you time and frustration by automating the citation process and ensuring that your sources are properly cited. So, sit back and let us take care of the hard work while you focus on your research and writing.</p>
+      <div class="h-[5%]"></div>
+        <p>We offer a range of services to assist in your research process. These include:</p>
+        <ul class="list-disc ml-[5%]">
+          <li>Natural Language Processing (NLP) Capabilities</li>
+          <li>Quick Source Retrieval</li>
+          <li>Properly Formatted Sources</li>
+          <li>Save Search Results</li>
+          <li>Source Grouping</li>
+          <li>User-Friendly Interface</li>
+        </ul>
+      </div>
+    </div>
+    <div class="how-to-use flex flex-wrap justify-center items-center">
+      <a name="use-steps"></a>
+      <h2 class="text-3xl font-bold text-center block">How To Use</h2>
+      <div class="step-cards flex m-[5%] justify-center items-center">
+        <div class="card bg-[#FFF5F5] w-[300px] h-[300px] rounded-xl mr-[20px] p-[20px]">
+          <h3 class="text-center font-bold text-2xl">Step 1</h3>
+          <p class="mt-[50px] text-center">
+            <a href="sign-up" class="underline">Create an Account</a>
+            or
+            <a href="login" class="underline">Log in</a>
+          </p>
+        </div>
+
+        <div class="card bg-[#FFF5F5] w-[300px] h-[300px] rounded-xl mr-[20px] p-[20px]">
+          <h3 class="text-center font-bold text-2xl">Step 2</h3>
+          <p class="mt-[50px] text-center">
+            Enter your long text in the homepage.
+          </p>
+        </div>
+
+        <div class="card bg-[#FFF5F5] w-[300px] h-[300px] rounded-xl mr-[20px] p-[20px]">
+          <h3 class="text-center font-bold text-2xl">Step 3</h3>
+          <p class="mt-[50px] text-center">
+            Save and group returned sources as you please!
+          </p>
+        </div>
+      </div>
+    </div>
+  <script src="../static/scripts/script.js"></script>
+</body>
+</html>
