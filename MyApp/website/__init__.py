@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from website.access.credentials import params
 from flask_login import LoginManager
 from os import path
 
